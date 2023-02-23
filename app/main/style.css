@@ -1,0 +1,111 @@
+/* Set some basic styles for the page */
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #333;
+    color: #fff;
+    margin: 0;
+    padding: 0;
+}
+
+h1,
+h2,
+p {
+    margin: 0;
+}
+
+
+/* Center the main content of the page */
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+
+/* Style the temperature display */
+
+#currentTemp {
+    font-size: 5rem;
+    font-weight: bold;
+}
+
+
+/* Style the humidity display */
+
+#humidity {
+    margin-top: 20px;
+    font-size: 1.5rem;
+}
+
+
+/* Style the weather icon */
+
+#weatherIcon {
+    margin-top: 20px;
+}
+
+
+/* Add some additional styles for mobile devices */
+
+@media screen and (max-width: 767px) {
+    #currentTemp {
+        font-size: 3rem;
+    }
+    #humidity {
+        font-size: 1rem;
+    }
+}
+
+.forecast {
+    display: flex;
+    justify-content: center;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.day {
+    border: 1px solid #ccc;
+    padding: 10px;
+    text-align: center;
+    width: 100px;
+    flex: none;
+    margin-right: 10px;
+}
+
+.day:last-child {
+    margin-right: 0;
+}
+
+.day1 {
+    background-color: #f0f0f0;
+}
+
+.day2 {
+    background-color: #e0e0e0;
+}
+
+.day3 {
+    background-color: #d0d0d0;
+}
+
+.day4 {
+    background-color: #c0c0c0;
+}
+
+.day5 {
+    background-color: #b0b0b0;
+}
+
+.day6 {
+    background-color: #a0a0a0;
+}
+
+.day7 {
+    background-color: #909090;
+}
