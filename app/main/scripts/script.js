@@ -17,7 +17,7 @@ setInterval(() => {
     console.log('time updated');
 }, 60000);
 
-const api = '48282f9ac4336f7d59f304c555a36249';
+const api = '';
 const city = 'Amsterdam';
 
 const currentTempElem = document.getElementById('currentTemp');

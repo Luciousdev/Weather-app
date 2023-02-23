@@ -6,14 +6,25 @@
     "scripts": {
         "test": "echo \"Error: no test specified\" && exit 1",
         "start": "electron .",
-        "build": "electron-packager . --all"
+        "package": "electron-builder"
     },
     "author": "Lucy Gwen Puyenbroek",
     "license": "ISC",
     "devDependencies": {
-        "electron": "^23.1.1"
+        "electron": "^23.1.1",
+        "electron-builder": "^22.10.3"
     },
     "dependencies": {
         "dotenv": "^16.0.3"
+    },
+    "build": {
+        "appId": "com.example.my-electron-app",
+        "productName": "My Electron App",
+        "win": {
+            "target": "nsis"
+        },
+        "linux": {
+            "target": "deb"
+        }
     }
 }
