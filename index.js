@@ -1,4 +1,5 @@
 const { app, BrowserWindow, screen } = require("electron")
+    // const smalltalk = require("smalltalk")
 
 let win = null;
 let loadingWindow = null;
@@ -11,6 +12,8 @@ app.whenReady().then(() => {
         transparent: true,
         frame: false,
         alwaysOnTop: true,
+        nodeIntegration: true,
+        contextIsolation: false,
         // devTools: false,
         // icon: __dirname + './project files/icon/finished/icon.png'
     });
@@ -47,6 +50,7 @@ function createMainWindow(winWidth, winHeight) {
         webPreferences: {
             nodeIntegration: true,
             // devTools: false
+            contextIsolation: false,
         }
     })
     win.loadFile('./app/main/index.html')

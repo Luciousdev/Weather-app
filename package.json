@@ -3,28 +3,43 @@
     "version": "1.0.0",
     "description": "",
     "main": "index.js",
+    "author": {
+        "name": "Lucy Gwen Puyenbroek",
+        "email": "lucy@luciousdev.nl"
+    },
     "scripts": {
         "test": "echo \"Error: no test specified\" && exit 1",
         "start": "electron .",
         "package": "electron-builder"
     },
-    "author": "Lucy Gwen Puyenbroek",
     "license": "ISC",
     "devDependencies": {
         "electron": "^23.1.1",
         "electron-builder": "^22.10.3"
     },
     "dependencies": {
-        "dotenv": "^16.0.3"
+        "dotenv": "^16.0.3",
+        "rpmbuild": "^0.0.23",
+        "smalltalk": "^4.1.1"
     },
     "build": {
         "appId": "com.example.my-electron-app",
-        "productName": "My Electron App",
+        "productName": "Weather app",
         "win": {
             "target": "nsis"
         },
         "linux": {
-            "target": "deb"
+            "target": [
+                "deb",
+                "pacman",
+                "AppImage",
+                "snap",
+                "rpm",
+                "freebsd"
+            ]
         }
-    }
+    },
+    "permissions": [
+        "geolocation"
+    ]
 }
